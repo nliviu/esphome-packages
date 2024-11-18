@@ -1,0 +1,81 @@
+# Arial size minimum 10
+font:
+
+    # ------- Arial -------------
+  - file: "fonts/Arial.ttf"
+    id: arial_12
+    size: 12
+    glyphs: °³:/.,-+%0123456789ABCDEÈFGHIJKLMNOPQRSTUVWXYZ µaàbcçdeéèfghijklmnopqrstuvwxyz|(){}[]=!@#$
+
+  - file: "fonts/Arial.ttf"
+    id: arial_14
+    size: 14
+    glyphs: °³:/.,-+%0123456789ABCDEÈFGHIJKLMNOPQRSTUVWXYZ µaàbcçdeéèfghijklmnopqrstuvwxyz|(){}[]=!@#$
+
+  - file: "fonts/Arial.ttf"
+    id: arial_16
+    size: 16
+    glyphs: °³:/.,-+%0123456789ABCDEÈFGHIJKLMNOPQRSTUVWXYZ µaàbcçdeéèfghijklmnopqrstuvwxyz|(){}[]=!@#$
+
+  - file: "fonts/Arial.ttf"
+    id: arial_20
+    size: 20
+    glyphs: °³:/.,-+%0123456789ABCDEÈFGHIJKLMNOPQRSTUVWXYZ µaàbcçdeéèfghijklmnopqrstuvwxyz|(){}[]=!@#$
+
+    # ------- Arial Bold --------
+  - file: "fonts/Arial Bold.ttf"
+    id: arial_bold_12
+    size: 12
+    glyphs: °³:/.,-+%0123456789ABCDEÈFGHIJKLMNOPQRSTUVWXYZ µaàbcçdeéèfghijklmnopqrstuvwxyz|(){}[]=!@#$
+
+  - file: "fonts/Arial Bold.ttf"
+    id: arial_bold_14
+    size: 14
+    glyphs: °³:/.,-+%0123456789ABCDEÈFGHIJKLMNOPQRSTUVWXYZ µaàbcçdeéèfghijklmnopqrstuvwxyz|(){}[]=!@#$
+
+  - file: "fonts/Arial Bold.ttf"
+    id: arial_bold_16
+    size: 16
+    glyphs: °³:/.,-+%0123456789ABCDEÈFGHIJKLMNOPQRSTUVWXYZ µaàbcçdeéèfghijklmnopqrstuvwxyz|(){}[]=!@#$
+
+  - file: "fonts/Arial Bold.ttf"
+    id: arial_bold_20
+    size: 20
+    glyphs: °³:/.,-+%0123456789ABCDEÈFGHIJKLMNOPQRSTUVWXYZ µaàbcçdeéèfghijklmnopqrstuvwxyz|(){}[]=!@#$
+
+#  - file: "fonts/Arial Bold.ttf"
+#    id: arial_bold_32
+#    size: 32
+#    glyphs: °³:/.,-+%0123456789ABCDEÈFGHIJKLMNOPQRSTUVWXYZ µaàbcçdeéèfghijklmnopqrstuvwxyz|(){}[]=!@#$
+   
+#  - file: "fonts/Arial Bold.ttf"
+#    id: xarial_foot
+#    size: 32
+    
+#  - file: "fonts/Arial Bold.ttf"
+#    id: arial_bold_92
+#    size: 92
+    
+#  - file: "fonts/Arial Bold.ttf"
+#    id: arial_bold_130
+#    size: 130
+    
+    # --------- Steelfish -------
+  - file: "fonts/steelfis.ttf"
+    id: steel_40
+    size: 40
+    glyphs: °³:/.,-+%0123456789ABCDEÈFGHIJKLMNOPQRSTUVWXYZ µaàbcçdeéèfghijklmnopqrstuvwxyz|(){}[]=!@#$
+  - file: "fonts/steelfis.ttf"
+    id: qsteel_b
+    size: 92
+    glyphs: °³:/.,-+%0123456789ABCDEÈFGHIJKLMNOPQRSTUVWXYZ µaàbcçdeéèfghijklmnopqrstuvwxyz|(){}[]=!@#$
+
+    # --------- Material Icons -------
+  - file: "fonts/materialdesignicons-webfont.ttf"
+    id: icon_16
+    size: 16
+    glyphs: [
+      "󰖩", # wifi on
+      "󰂅", # battery
+      "󰖪", #wifi off
+      ]
