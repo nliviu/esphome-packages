@@ -1,0 +1,46 @@
+i2c:
+  sda: 
+    number: ${i2c_sda}
+  scl:
+    number: ${i2c_scl}
+  scan: True
+
+sensor:
+  - platform: htu21d
+    temperature:
+      name: "HTU21D Temp"
+      id: htu21d_temp
+      offset: 0.0
+      filters:
+        - lambda: return x + htu21d_temp_offset->state;
+    humidity:
+      name: "HTU21D Humid"
+      id: htu21d_humid
+      offset: 0.0
+      filters:
+        - lambda: return x + htu21d_humid_offset->state;
+    update_interval: 60s    #default
+
+number:
+  - platform: template
+    id: htu21d_temp_offset
+    name: "HTU21D T Offset"
+    unit_of_measurement: "°C"
+    entity_category: config
+    optimistic: true
+    step: 0.5
+    min_value: -5
+    max_value: 5
+    restore_value: true
+    initial_value: 0.0
+  - platform: template
+    id: htu21d_humid_offset
+    name: "HTU21D RH Offset"
+    unit_of_measurement: "%"
+    entity_category: config
+    optimistic: true
+    step: 1.0
+    min_value: -15
+    max_value: 15
+    restore_value: true
+    initial_value: 0.0
