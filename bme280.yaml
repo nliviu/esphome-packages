@@ -1,0 +1,50 @@
+i2c:
+  sda: 
+    number: ${i2c_sda}
+  scl:
+    number: ${i2c_scl}
+  scan: True
+
+sensor:
+  - platform: bme280_i2c
+    temperature:
+      name: "BME280 Temp"
+      id: bme280_temp
+      filters:
+        - lambda: return x + bme280_temp_offset->state;
+    pressure:
+      name: "BME280 Press"
+      id: bme280_press
+    humidity:
+      name: "BME280 Humid"
+      id: bme280_humid
+      filters:
+        - lambda: return x + bme280_humid_offset->state;
+    iir_filter: 16x
+    address: 0x76
+    update_interval: 60s
+
+number:
+  - platform: template
+    id: bme280_temp_offset
+    name: "BME280 T Offset"
+    unit_of_measurement: "°C"
+    entity_category: config
+    optimistic: true
+    step: 0.5
+    min_value: -5
+    max_value: 5
+    restore_value: true
+    initial_value: 0.0
+  - platform: template
+    id: bme280_humid_offset
+    name: "BME280 RH Offset"
+    unit_of_measurement: "%"
+    entity_category: config
+    optimistic: true
+    step: 1.0
+    min_value: -15
+    max_value: 15
+    restore_value: true
+    initial_value: 0.0
+
