@@ -10,13 +10,11 @@ sensor:
     temperature:
       name: "HTU21D Temp"
       id: htu21d_temp
-      offset: 0.0
       filters:
         - lambda: return x + htu21d_temp_offset->state;
     humidity:
       name: "HTU21D Humid"
       id: htu21d_humid
-      offset: 0.0
       filters:
         - lambda: return x + htu21d_humid_offset->state;
     update_interval: 60s    #default
