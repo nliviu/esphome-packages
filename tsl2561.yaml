@@ -1,0 +1,13 @@
+i2c:
+  sda: 
+    number: ${i2c_sda}
+  scl:
+    number: ${i2c_scl}
+  scan: True
+
+sensor:
+  - platform: tsl2561
+    name: "TSL2561 Illuminance"
+    id: tsl2561_lux
+    address: 0x39
+    update_interval: 1s
