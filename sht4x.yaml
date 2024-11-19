@@ -22,6 +22,7 @@ sensor:
     heater_power: "High"    # default
     heater_time: "Long"     # default or "Short"
     update_interval: 60s    # default
+    address: 0x44           # default, might be 0x45
 
 number:
   - platform: template
