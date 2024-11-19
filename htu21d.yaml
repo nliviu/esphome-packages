@@ -5,6 +5,7 @@ i2c:
     number: ${i2c_scl}
   scan: True
 
+# I2C address 0x40
 sensor:
   - platform: htu21d
     model: htu21d
