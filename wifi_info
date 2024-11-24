@@ -1,0 +1,9 @@
+text_sensor:
+  - platform: wifi_info
+    ip_address:
+      name: IP Address
+      internal: True
+    ssid:
+      name: Connected SSID
+      id: "connected_ssid"
+      internal: True
