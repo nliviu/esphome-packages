@@ -1,4 +1,3 @@
-
 debug:
   update_interval: 5s
 
@@ -14,6 +13,6 @@ sensor:
     block:
       name: "Heap Max Block"
       internal: True
-    psram:
-      name: "Free PSRAM"
-      internal: True
+    #psram:
+    #  name: "Free PSRAM"
+    #  internal: True
