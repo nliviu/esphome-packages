@@ -1,0 +1,34 @@
+http_request:
+  useragent: esphome/device
+  timeout: 10s
+  verify_ssl: false
+  buffer_size_tx: 1024
+
+script:
+  - id: influxdb_write
+    parameters:
+      url: string
+      token: string
+      line: string
+    then:
+      - http_request.send:
+          method: POST
+          url: !lambda |-
+            return url;
+          headers:
+            Authorization: !lambda |-
+              static std::string auth = std::string("Token ") + token;
+              return auth.c_str();
+          body: !lambda |-
+            return line.c_str();
+          capture_response: true
+          on_response:
+            then:
+              - lambda: |-
+                  ESP_LOGW("script", "body: %s", body.c_str());
+              - logger.log:
+                  format: 'Response status: %d, Duration: %u ms, body: %s'
+                  args:
+                    - response->status_code
+                    - response->duration_ms
+                    - body.c_str()
