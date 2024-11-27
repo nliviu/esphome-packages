@@ -33,6 +33,7 @@ number:
     max_value: 5
     restore_value: true
     initial_value: 0.0
+    mode: box
   - platform: template
     id: htu21d_humid_offset
     name: "HTU21D RH Offset"
@@ -44,3 +45,5 @@ number:
     max_value: 15
     restore_value: true
     initial_value: 0.0
+    mode: box
+
