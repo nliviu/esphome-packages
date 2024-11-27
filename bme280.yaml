@@ -36,6 +36,7 @@ number:
     max_value: 5
     restore_value: true
     initial_value: 0.0
+    mode: box
   - platform: template
     id: bme280_humid_offset
     name: "BME280 RH Offset"
@@ -47,4 +48,5 @@ number:
     max_value: 15
     restore_value: true
     initial_value: 0.0
+    mode: box
 
