@@ -37,7 +37,6 @@ number:
     mode: box
     restore_value: true
     initial_value: 0.0
-    mode: box
   - platform: template
     id: sht4x_humid_offset
     name: "SHT4X RH Offset"
@@ -50,4 +49,3 @@ number:
     mode: box
     restore_value: true
     initial_value: 0.0
-    mode: box
