@@ -8,6 +8,7 @@ i2c:
 # I2C address 0x40 or 0x41
 sensor:
   - platform: htu31d
+    id: htu31d_sensor
     temperature:
       name: "HTU31D Temp"
       id: htu31d_temp
