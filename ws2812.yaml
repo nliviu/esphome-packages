@@ -1,0 +1,42 @@
+light:
+  - platform: esp32_rmt_led_strip
+    pin: ${ws2812_pin}
+    num_leds: 1
+    rmt_channel: 0
+    chipset: WS2812
+    rgb_order: GRB
+    name: "Status LED"
+    id: status_led
+    default_transition_length: 0.1s
+    on_turn_on:
+      - light.turn_on: 
+          id: status_led
+          effect: "On"
+    on_turn_off:
+      - light.turn_on: 
+          id: status_led
+          effect: "Off"
+    effects:
+      - pulse:
+          name: "Off1"
+          max_brightness: 55%
+      - pulse:
+          name: "On1"
+          transition_length: 0.1s
+          update_interval: 0.25s
+          max_brightness: 55%
+      - addressable_lambda:
+          name: "Off"
+          update_interval: 16ms
+          lambda: |-
+            it[0] = Color(0x00, 0x80, 0x00);
+      - addressable_lambda:
+          name: "On"
+          update_interval: 16ms
+          lambda: |-
+            it[0] = Color(0x80, 0x00, 0x00);
+      - addressable_lambda:
+          name: "Blank"
+          update_interval: 16ms
+          lambda: |-
+            it[0] = Color(0x00, 0x00, 0x00);
