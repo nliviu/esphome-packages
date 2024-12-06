@@ -7,6 +7,7 @@ i2c:
 
 sensor:
   - platform: sht4x
+    id: sht4x_sensor
     temperature:
       name: "SHT4X Temp"
       id: sht4x_temp
