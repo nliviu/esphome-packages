@@ -9,6 +9,7 @@ i2c:
 sensor:
   - platform: htu21d
     model: htu21d
+    id: htu21d_sensor
     temperature:
       name: "HTU21D Temp"
       id: htu21d_temp
