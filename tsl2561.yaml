@@ -7,6 +7,7 @@ i2c:
 
 sensor:
   - platform: tsl2561
+    id: tsl2561_sensor
     name: "TSL2561 Illuminance"
     id: tsl2561_lux
     address: 0x39
