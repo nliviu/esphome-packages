@@ -5,6 +5,8 @@ text_sensor:
   - platform: debug
     reset_reason:
       name: "Reset Reason"
+    device:
+      name: "Device Info"
 sensor:
   - platform: debug
     free:
