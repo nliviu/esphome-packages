@@ -1,0 +1,22 @@
+i2c:
+  sda: 
+    number: ${i2c_sda}
+  scl:
+    number: ${i2c_scl}
+  scan: True
+
+sensor:
+  - platform: sgp4x
+    voc:
+      name: "VOC Index"
+      id: "sgp40_voc_index"
+      accuracy_decimals: 1
+      filters:
+        - sliding_window_moving_average:
+            window_size: 30
+            send_every: 20
+    store_baseline: yes
+    update_interval: 1s
+    compensation:
+      temperature_source: ${sgp4x_temperature_source}
+      humidity_source: ${sgp4x_humidity_source}
