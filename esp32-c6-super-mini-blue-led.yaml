@@ -1,0 +1,11 @@
+output:
+  - platform: gpio
+    pin: ${blue_led_pin}
+    id: blue_led
+
+light:
+  - platform: binary
+    name: "Blue LED"
+    id: blue_light
+    output: blue_led
+    internal: True  # do not expose it in the interface
