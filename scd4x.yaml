@@ -1,0 +1,21 @@
+i2c:
+  sda: ${i2c_sda}
+  scl: ${i2c_scl}
+  scan: true
+
+sensor:
+  - platform: scd4x
+    id: scd4x_sensor
+    co2:
+      name: "SCD4x CO2"
+      id: scd4x_co2
+    temperature:
+      name: "SCD4x Temperature"
+      id: scd4x_temp
+    humidity:
+      name: "SCD4x Humidity"
+      id: scd4x_humid
+    address: 0x62 # default
+    measurement_mode: periodic  # default every 5 sec
+    update_interval: 10s  # default 60s
+    ambient_pressure_compensation_source: ${ambient_pressure_compensation_source}
