@@ -10,8 +10,11 @@ text_sensor:
     name: "Uptime"
     id: uptime_formatted
     update_interval: 1s
-    lambda: |-
+    lambda: |- 
       double uptime = dev_uptime->state;
+      if(isnan(uptime)) {
+        return {};
+      }
       int32_t dhm = uptime / 60;
       int32_t seconds = int32_t(std::lround(uptime)) % 60; //- dhm * 60;
       int32_t dh = dhm / 60;
