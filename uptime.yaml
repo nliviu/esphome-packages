@@ -13,7 +13,7 @@ text_sensor:
     lambda: |-
       double uptime = dev_uptime->state;
       int32_t dhm = uptime / 60;
-      int32_t seconds = uptime % 60; //- dhm * 60;
+      int32_t seconds = int32_t(std::lround(uptime)) % 60; //- dhm * 60;
       int32_t dh = dhm / 60;
       int32_t minutes = dhm - dh * 60;
       int32_t days = dh / 24;
