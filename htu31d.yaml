@@ -3,7 +3,6 @@ i2c:
     number: ${i2c_sda}
   scl:
     number: ${i2c_scl}
-  id: i2c0
   scan: True
 
 # I2C address 0x40 or 0x41
