@@ -1,0 +1,41 @@
+font:
+  # Light 300
+  # Regular 400
+  # Medium 500 
+  # SemiBold 600
+  # Bold 700
+  # ExtraBold 800 
+
+  - file: "gfonts://Roboto@400"
+    glyphs: ${glyphs}
+    size: 12
+    id: arial_12
+  - file: "gfonts://Roboto@400"
+    glyphs: ${glyphs}
+    size: 14
+    id: arial_14
+  - file: "gfonts://Roboto@400"
+    glyphs: ${glyphs}
+    size: 16
+    id: arial_16
+  - file: "gfonts://Roboto@700"
+    glyphs: ${glyphs}
+    size: 16
+    id: arial_bold_16
+
+  - file: "gfonts://B612@400"
+    glyphs: ${glyphs}
+    size: 12
+    id: b612_12
+  - file: "gfonts://B612@400"
+    glyphs: ${glyphs}
+    size: 14
+    id: b612_14
+  - file: "gfonts://B612@400"
+    glyphs: ${glyphs}
+    size: 16
+    id: b612_16
+  - file: "gfonts://B612@700"
+    glyphs: ${glyphs}
+    size: 16
+    id: b612_bold_16
