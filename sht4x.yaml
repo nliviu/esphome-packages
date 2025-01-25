@@ -12,12 +12,12 @@ sensor:
       name: "SHT4X Temp"
       id: sht4x_temp
       filters:
-        - lambda: return x + sht4x_temp_offset->state;
+        - lambda: return x + id(sht4x_temp_offset).state;
     humidity:
       name: "SHT4X Humid"
       id: sht4x_humid
       filters:
-        - lambda: return x + sht4x_humid_offset->state;
+        - lambda: return x + id(sht4x_humid_offset).state;
     precision: "High"       # default
     heater_max_duty: 0.0    # defalut max 0.05
     heater_power: "High"    # default

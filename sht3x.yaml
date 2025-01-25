@@ -12,12 +12,12 @@ sensor:
       name: "SHT3X Temp"
       id: sht3x_temp
       filters:
-        - lambda: return x + sht3x_temp_offset->state;
+        - lambda: return x + id(sht3x_temp_offset).state;
     humidity:
       name: "SHT3X Humid"
       id: sht3x_humid
       filters:
-        - lambda: return x + sht3x_humid_offset->state;
+        - lambda: return x + id(sht3x_humid_offset).state;
     address: 0x44           # default. Might be 0x45
     update_interval: 60s    # default
 

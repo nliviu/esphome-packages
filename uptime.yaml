@@ -11,7 +11,7 @@ text_sensor:
     id: uptime_formatted
     update_interval: 1s
     lambda: |- 
-      double uptime = dev_uptime->state;
+      double uptime = id(dev_uptime).state;
       if(isnan(uptime)) {
         return {};
       }

@@ -12,7 +12,7 @@ sensor:
       name: "BME280 Temp"
       id: bme280_temp
       filters:
-        - lambda: return x + bme280_temp_offset->state;
+        - lambda: return x + id(bme280_temp_offset).state;
     pressure:
       name: "BME280 Press"
       id: bme280_press
@@ -20,7 +20,7 @@ sensor:
       name: "BME280 Humid"
       id: bme280_humid
       filters:
-        - lambda: return x + bme280_humid_offset->state;
+        - lambda: return x + id(bme280_humid_offset).state;
     iir_filter: 16x
     address: 0x76
     update_interval: 60s

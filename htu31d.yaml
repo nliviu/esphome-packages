@@ -13,12 +13,12 @@ sensor:
       name: "HTU31D Temp"
       id: htu31d_temp
       filters:
-        - lambda: return x + htu31d_temp_offset->state;
+        - lambda: return x + id(htu31d_temp_offset).state;
     humidity:
       name: "HTU31D Humid"
       id: htu31d_humid
       filters:
-        - lambda: return x + htu31d_humid_offset->state;
+        - lambda: return x + id(htu31d_humid_offset).state;
     update_interval: 60s    #default
 
 number:
