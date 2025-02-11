@@ -26,9 +26,5 @@ script:
             then:
               - lambda: |-
                   ESP_LOGW("script", "body: %s", body.c_str());
-              - logger.log:
-                  format: 'Response status: %d, Duration: %u ms, body: %s'
-                  args:
-                    - response->status_code
-                    - response->duration_ms
-                    - body.c_str()
+                  ESP_LOGW("script", "Response status: %d, Duration: %u ms, body: %s", 
+                    response->status_code, response->duration_ms, body.c_str());
