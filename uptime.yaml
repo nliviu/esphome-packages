@@ -22,9 +22,10 @@ text_sensor:
       int32_t days = dh / 24;
       int32_t hours = dh - days * 24;
 
-#       char buffer[64];
-#       snprintf(buffer, sizeof(buffer), "%" PRId32 ":%02" PRId32 ":%02" PRId32 ":%02" PRId32 "", days, hours, minutes, seconds); //(int32_t)(std::lround(seconds)));
-#       return {buffer};
+      char buffer[64];
+      snprintf(buffer, sizeof(buffer), "%" PRId32 ":%02" PRId32 ":%02" PRId32 ":%02" PRId32 "", days, hours, minutes, seconds); //(int32_t)(std::lround(seconds)));
+      return {buffer};
+
 # text_sensor:
 #   - platform: uptime
 #     name: "Uptime Formatted"
