@@ -5,23 +5,23 @@ sensor:
     update_interval: 1s
     internal: True
 
-text_sensor:
-  - platform: template
-    name: "Uptime"
-    id: uptime_formatted
-    update_interval: 1s
-    lambda: |- 
-      double uptime = id(dev_uptime).state;
-      if(isnan(uptime)) {
-        return {};
-      }
-      int32_t dhm = uptime / 60;
-      int32_t seconds = int32_t(std::lround(uptime)) % 60; //- dhm * 60;
-      int32_t dh = dhm / 60;
-      int32_t minutes = dhm - dh * 60;
-      int32_t days = dh / 24;
-      int32_t hours = dh - days * 24;
+# text_sensor:
+#   - platform: template
+#     name: "Uptime"
+#     id: uptime_formatted
+#     update_interval: 1s
+#     lambda: |- 
+#       double uptime = id(dev_uptime).state;
+#       if(isnan(uptime)) {
+#         return {};
+#       }
+#       int32_t dhm = uptime / 60;
+#       int32_t seconds = int32_t(std::lround(uptime)) % 60; //- dhm * 60;
+#       int32_t dh = dhm / 60;
+#       int32_t minutes = dhm - dh * 60;
+#       int32_t days = dh / 24;
+#       int32_t hours = dh - days * 24;
 
-      char buffer[64];
-      snprintf(buffer, sizeof(buffer), "%" PRId32 ":%02" PRId32 ":%02" PRId32 ":%02" PRId32 "", days, hours, minutes, seconds); //(int32_t)(std::lround(seconds)));
-      return {buffer};
+#       char buffer[64];
+#       snprintf(buffer, sizeof(buffer), "%" PRId32 ":%02" PRId32 ":%02" PRId32 ":%02" PRId32 "", days, hours, minutes, seconds); //(int32_t)(std::lround(seconds)));
+#       return {buffer};
