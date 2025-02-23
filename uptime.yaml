@@ -27,6 +27,6 @@ sensor:
 #       return {buffer};
 text_sensor:
   - platform: uptime
-     name: "Uptime Formatted"
-     id: uptime_formatted
-     update_interval: 1s
+    name: "Uptime Formatted"
+    id: uptime_formatted
+    update_interval: 1s
