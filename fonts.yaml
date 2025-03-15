@@ -9,28 +9,34 @@ font:
   # Bold 700
   # ExtraBold 800 
 
-  - file: "gfonts://Roboto@400"
+  - file: "gfonts://Lato@400"
     glyphs: ${glyphs}
     size: 12
+    bpp: 4
     id: arial_12
-  - file: "gfonts://Roboto@400"
+  - file: "gfonts://Lato@400"
     glyphs: ${glyphs}
     size: 14
+    bpp: 4
     id: arial_14
-  - file: "gfonts://Roboto@400"
+  - file: "gfonts://Lato@400"
     glyphs: ${glyphs}
     size: 16
+    bpp: 4
     id: arial_16
-  - file: "gfonts://Roboto@700"
+  - file: "gfonts://Lato@700"
     glyphs: ${glyphs}
     size: 16
+    bpp: 4
     id: arial_bold_16
-  - file: "gfonts://Roboto@400"
+  - file: "gfonts://Lato@400"
     glyphs: ${glyphs}
     size: 20
+    bpp: 4
     id: arial_20
-  - file: "gfonts://Roboto@700"
+  - file: "gfonts://Lato@700"
     glyphs: ${glyphs}
+    bpp: 4
     size: 20
     id: arial_bold_20
 
