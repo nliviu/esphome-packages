@@ -25,6 +25,14 @@ font:
     glyphs: ${glyphs}
     size: 16
     id: arial_bold_16
+  - file: "gfonts://Roboto@400"
+    glyphs: ${glyphs}
+    size: 20
+    id: arial_20
+  - file: "gfonts://Roboto@700"
+    glyphs: ${glyphs}
+    size: 20
+    id: arial_bold_20
 
   - file: "gfonts://B612@400"
     glyphs: ${glyphs}
