@@ -11,6 +11,16 @@ font:
 
   - file: "gfonts://Lato@400"
     glyphs: ${glyphs}
+    size: 8
+    bpp: 4
+    id: arial_8
+  - file: "gfonts://Lato@400"
+    glyphs: ${glyphs}
+    size: 10
+    bpp: 4
+    id: arial_10
+  - file: "gfonts://Lato@400"
+    glyphs: ${glyphs}
     size: 12
     bpp: 4
     id: arial_12
