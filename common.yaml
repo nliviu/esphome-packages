@@ -2,6 +2,7 @@
 text_sensor:
   - platform: version
     name: "ESPHome Version"
+    id: esphome_version
 
 button:
   - platform: restart
