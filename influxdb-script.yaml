@@ -1,3 +1,4 @@
+# 2025/5/21 - esphome 2025.5.0 - http_request.headers -> http_request.request_headers
 http_request:
   useragent: esphome/device
   timeout: 10s
@@ -15,7 +16,7 @@ script:
           method: POST
           url: !lambda |-
             return url;
-          headers:
+          request_headers:
             Authorization: !lambda |-
               static std::string auth = std::string("Token ") + token;
               return auth.c_str();
