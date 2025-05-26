@@ -1,4 +1,8 @@
-  
+sensor:
+  - platform: internal_temperature
+    name: "Internal Temperature"
+    id: internal_temperature
+
 text_sensor:
   - platform: version
     name: "ESPHome Version"
