@@ -1,0 +1,17 @@
+esphome:
+  platformio_options:
+    board_build.flash_mode: dio
+
+esp32:
+  board: esp32-c3-devkitm-1
+  framework:
+    type: esp-idf
+
+packages:
+  mcu: !include mcu-common.yaml
+
+  remote_package_files:
+    url: https://github.com/nliviu/esphome-packages
+    files: [common.yaml, debug.yaml, uptime.yaml, wifi-info.yaml, wifi-signal.yaml]
+    ref: main
+    refresh: 1min
