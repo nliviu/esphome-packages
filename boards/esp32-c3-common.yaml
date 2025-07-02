@@ -8,7 +8,7 @@ esp32:
     type: esp-idf
 
 packages:
-  mcu: !include mcu-common.yaml
+  mcu: !include boards/mcu-common.yaml
 
   remote_package_files:
     url: https://github.com/nliviu/esphome-packages
