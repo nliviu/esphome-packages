@@ -12,6 +12,6 @@ packages:
 
   remote_package_files:
     url: https://github.com/nliviu/esphome-packages
-    files: [common.yaml, debug.yaml, uptime.yaml, wifi-info.yaml, wifi-signal.yaml]
+    files: [common.yaml, dev-info.yaml, uptime.yaml, wifi-info.yaml, wifi-signal.yaml]
     ref: main
     refresh: 1min
