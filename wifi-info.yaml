@@ -3,8 +3,8 @@ text_sensor:
     ip_address:
       name: IP Address
       id: ip_address
-      internal: True
+      internal: False
     ssid:
       name: Connected SSID
       id: connected_ssid
-      internal: True
+      internal: False
