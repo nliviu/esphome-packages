@@ -1,5 +1,6 @@
 text_sensor:
   - platform: wifi_info
+    id: wifi_info_sensor
     ip_address:
       name: IP Address
       id: ip_address
@@ -8,3 +9,7 @@ text_sensor:
       name: Connected SSID
       id: connected_ssid
       internal: False
+    mac_address:
+      id: device_mac
+      name: "MAC Address"
+      entity_category: "diagnostic"
