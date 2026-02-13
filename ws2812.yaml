@@ -8,6 +8,7 @@ light:
     id: status_led
     internal: true
     default_transition_length: 0.1s
+    restore_mode: ALWAYS_OFF
     on_turn_on:
       - light.turn_on: 
           id: status_led
