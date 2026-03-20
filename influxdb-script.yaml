@@ -22,10 +22,10 @@ script:
               return auth.c_str();
           body: !lambda |-
             return line.c_str();
-          capture_response: true
-          on_response:
-            then:
-              - lambda: |-
-                  ESP_LOGW("script", "body: %s", body.c_str());
-                  ESP_LOGW("script", "Response status: %d, Duration: %u ms, body: %s", 
-                    response->status_code, response->duration_ms, body.c_str());
+          # capture_response: true
+          # on_response:
+          #   then:
+          #     - lambda: |-
+          #         ESP_LOGW("script", "body: %s", body.c_str());
+          #         ESP_LOGW("script", "Response status: %d, Duration: %u ms, body: %s", 
+          #           response->status_code, response->duration_ms, body.c_str());
